@@ -12,7 +12,7 @@ input[type="password"],
 input[type="text"],
 input[type="tel"] {
   @apply w-full mb-4 rounded-xl;
-  @apply block border p-2 border-gray-300 bg-gray-200;
+  @apply block border p-2 border-gray-300 bg-gray-100;
 }
 
 label {
@@ -24,8 +24,9 @@ label + input {
   margin-left: -2px;
 }
 
+.button,
 button {
-  @apply block w-full text-gray-700 font-semibold;
+  @apply flex justify-center w-full text-gray-700 font-semibold gap-2;
   @apply border border-gray-300 rounded-xl px-6 py-2;
 }
 
