@@ -26,7 +26,7 @@ const MenuItems = () => {
     return "Not an admin";
   }
   return (
-    <section className="mt-8 max-w-md mx-auto">
+    <section className="mt-8 max-w-2xl mx-auto">
       <UserTabs isAdmin={data.admin} />
       <div className="mt-8">
         <Link className="button mb-2 flex " href={"/menu-items/new"}>
@@ -42,12 +42,19 @@ const MenuItems = () => {
               <Link
                 key={item.name}
                 href={"/menu-items/edit/" + item._id}
-                className="bg-gray-200 rounded-lg p-4"
+                className="border rounded-lg p-5 bg-gray-100 hover:bg-primary hover:text-white transition-all duration-300"
               >
-                <div className="relative ">
-                  <Image src={item.image} alt={""} width={200} height={200} />
+                <div className="relative w-full h-[200px]">
+                  <Image
+                    src={item.image}
+                    alt={""}
+                    fill
+                    className="rounded-full"
+                  />
                 </div>
-                <div className="text-center">{item.name}</div>
+                <div className="text-center mt-3 font-semibold italic">
+                  {item.name}
+                </div>
               </Link>
             ))}
         </div>

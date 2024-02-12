@@ -1,6 +1,7 @@
 import { User } from "@/app/models/User";
 import mongoose from "mongoose";
 import { NextResponse } from "next/server";
+import bcrypt from "bcryptjs";
 export const POST = async (request) => {
   const body = await request.json();
   mongoose.connect(process.env.MONGO_URL);

@@ -1,4 +1,4 @@
-import { model } from "mongoose";
+import mongoose, { model } from "mongoose";
 
 const { Schema, models } = require("mongoose");
 
@@ -17,6 +17,9 @@ const MenuItemSchema = new Schema(
     },
     description: {
       type: String,
+    },
+    category: {
+      type: mongoose.Types.ObjectId,
     },
     basePrice: {
       type: Number,

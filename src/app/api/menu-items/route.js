@@ -21,3 +21,11 @@ export async function GET(request) {
   mongoose.connect(process.env.MONGO_URL);
   return NextResponse.json(await MenuItem.find());
 }
+
+export async function DELETE(request) {
+  mongoose.connect(process.env.MONGO_URL);
+  const url = new URL(request.url);
+  const _id = url.searchParams.get("_id");
+  await MenuItem.deleteOne({ _id });
+  return NextResponse.json(true);
+}
