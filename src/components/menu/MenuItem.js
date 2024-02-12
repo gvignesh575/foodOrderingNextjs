@@ -18,7 +18,9 @@ const MenuItem = ({
         />
       </div>
       <h4 className="font-semibold text-xl my-3">{name}</h4>
-      <p className="text-gray-500 text-sm">{description}</p>
+      <p className="text-gray-500 text-sm max-h-36 line-clamp-3">
+        {description}
+      </p>
       <button className="mt-4 bg-primary text-white rounded-full px-8 py-2">
         Add to cart ${basePrice}
       </button>
